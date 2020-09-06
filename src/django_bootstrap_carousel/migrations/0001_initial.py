@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('image', models.ImageField(null=True, upload_to=b'carousel/', blank=True)),
                 ('weight', models.IntegerField(default=0, db_index=True)),
                 ('activated', models.BooleanField(default=True, db_index=True)),
-                ('carousel', models.ForeignKey(related_name='items', to='django_bootstrap_carousel.Carousel')),
+                ('carousel', models.ForeignKey(related_name='items', to='django_bootstrap_carousel.Carousel', on_delete=models.CASCADE)),
             ],
             options={
                 'ordering': ['carousel', 'weight'],

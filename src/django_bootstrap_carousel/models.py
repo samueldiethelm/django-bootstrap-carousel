@@ -26,6 +26,7 @@ class CarouselItem(models.Model):
     carousel = models.ForeignKey(
         Carousel,
         related_name='items',
+        on_delete=models.CASCADE,
     )
 
     display_title = models.CharField(
